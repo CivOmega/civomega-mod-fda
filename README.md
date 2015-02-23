@@ -1,4 +1,4 @@
-# CivOmega: Bill Search Module
+# CivOmega: FDA Search Module
 
 A simple module for [CivOmega][civomega_repo]. See
 [the CivOmega repo][civomega_repo].
