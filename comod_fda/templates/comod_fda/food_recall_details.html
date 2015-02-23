@@ -1,0 +1,34 @@
+  {% if results|length == 0 %}
+  <p>We couldn't find any recalls.</p>
+{% else %}
+  <p>{{ meta.results.total }} results total. Here are the first {{ results|length }}:</p>
+
+  <table class="tablesorter">
+   <thead>
+   <tr>
+   <th style="width: 120px;">Company</th>
+   <th>Product</th>
+   <th>Reason</th>
+   <th style="width: 100px;">Date</th>
+   </tr>
+   </thead>
+   <tbody>
+   {% for item in results %}
+   <tr>
+   <td>{{ item.recalling_firm }}</td>
+   <td>
+   {{ item.product_description }}
+   </td>
+   <td>
+   {{ item.reason_for_recall }}
+   </td>
+   <td>{{ item.report_date }}</td>
+   </tr>
+   {% endfor %}
+   </tbody>
+  </table>
+  <script type="text/javascript">
+   $(".tablesorter").tablesorter();
+  </script>
+  <p><em>Data provided by <a href="https://open.fda.gov">Open FDA</a></em></p>
+{% endif %}
