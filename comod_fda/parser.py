@@ -22,7 +22,7 @@ PATTERN_ARGS_RE = re.compile(r'{([A-Za-z0-9_]+)}')
 def get_api_key():
     key = None
     try:
-        key = settings.SUNLIGHT_API_KEY
+        key = settings.FDA_API_KEY
     except:
         pass
     if 'FDA_API_KEY' in os.environ:
