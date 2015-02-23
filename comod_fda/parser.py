@@ -34,7 +34,7 @@ def answer_pattern(pattern, args):
 ############################################################
 # Applicable module-wide
 def render_answer_html(answer_data):
-    template = loader.get_template('comod_example/example.html')
+    template = loader.get_template('comod_fda/example.html')
     return template.render(Context(answer_data))
 
 def render_answer_json(answer_data):
